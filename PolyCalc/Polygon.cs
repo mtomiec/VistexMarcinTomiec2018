@@ -11,11 +11,11 @@ namespace PolyCalc
         private double circumRadius;
         private double inscribedCircleRadius;
 
-        public Polygon(int nov, double los, string n)
+        public Polygon(int numVertices, double len, string figureName)
         {
-            numberOfVertices = nov;
-            lenghtOfSide = los;
-            name = n;
+            numberOfVertices = numVertices;
+            lenghtOfSide = len;
+            name = figureName;
             circumRadius = lenghtOfSide / (2 * Math.Sin(Math.PI / numberOfVertices));
             inscribedCircleRadius = circumRadius * Math.Cos(Math.PI / numberOfVertices);
             verticesArray = new double[numberOfVertices, 2];
@@ -23,7 +23,8 @@ namespace PolyCalc
 
         public double CalculateSurface()
         {
-            return numberOfVertices * lenghtOfSide * inscribedCircleRadius / 2;
+            double surface = numberOfVertices * lenghtOfSide * inscribedCircleRadius / 2;
+            return Math.Round(surface, 4);
         }
 
         public double[,] CalculateVertices()
@@ -34,6 +35,13 @@ namespace PolyCalc
                 angle = i * 2 * Math.PI / numberOfVertices;
                 verticesArray[i, 0] = inscribedCircleRadius * Math.Cos(angle);
                 verticesArray[i, 1] = inscribedCircleRadius * Math.Sin(angle);
+            }
+            double deltaX = verticesArray[0, 0];
+            double deltaY = verticesArray[0, 1];
+            for (int i=0;i<numberOfVertices;i++)
+            {
+                verticesArray[i, 0] = Math.Round(verticesArray[i, 0] - deltaX,3);
+                verticesArray[i, 1] = Math.Round(verticesArray[i, 1] - deltaY,3);
             }
             return verticesArray;
         }

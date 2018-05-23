@@ -4,7 +4,7 @@
     {
         protected double surface;
         protected double[,] vertices;
-        protected int numOfVertices;
+        protected int numberOfVertices;
         protected string name;
         protected string path = null;
 
@@ -13,7 +13,7 @@
             surface = poly.CalculateSurface();
             vertices = poly.CalculateVertices();
             name = poly.name;
-            numOfVertices = poly.numberOfVertices;
+            numberOfVertices = poly.numberOfVertices;
         }
 
         public abstract void ReturnData();

@@ -8,7 +8,7 @@ namespace PolyCalc
         {
             if (args.Length==0 || args.Length==1)
             {
-                Console.WriteLine("Too few parameters.\nPlease insert at least number of vertices and lenght of side.\nFile path is optional.");
+                Console.WriteLine("Too few parameters.\nPlease insert at least number of vertices and lenght of side.\nFile path is optional.\n");
                 Console.WriteLine("Usage: PolyCalc num_of_vertices len_of_side [file_path]");
             }
             else
@@ -20,8 +20,6 @@ namespace PolyCalc
                 DataReturn dataReturn;
                 numberOfVertices = Convert.ToInt32(args[0]);
                 lenghtOfSide = Convert.ToDouble(args[1]);
-                Console.WriteLine(numberOfVertices);
-                Console.WriteLine(lenghtOfSide);
                 Polygon poly = polyFactory.CreatePolygon(numberOfVertices, lenghtOfSide);
                 if (args.Length==2)
                 {

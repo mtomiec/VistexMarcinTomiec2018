@@ -11,9 +11,9 @@ namespace PolyCalc
             Console.WriteLine("Surface of that " + name + " is equal: {0}", surface);
             Console.WriteLine("Vertices:\n");
             Console.WriteLine("x\ty");
-            for(int i=0;i<numOfVertices;i++)
+            for(int i=0;i< numberOfVertices; i++)
             {
-                Console.WriteLine(vertices[i, 0].ToString() + "\t" + vertices[i, 1].ToString());
+                Console.WriteLine(vertices[i, 0] + "\t" + vertices[i, 1]);
             }
         }
     }
