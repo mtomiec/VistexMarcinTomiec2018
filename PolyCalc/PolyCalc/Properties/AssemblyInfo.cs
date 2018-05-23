@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("VistexExercise")]
+[assembly: AssemblyTitle("PolyCalc")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("VistexExercise")]
+[assembly: AssemblyProduct("PolyCalc")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("2aebec64-2ce6-4236-a5bb-1795d49db6f5")]
+[assembly: Guid("27cfbee6-70dc-42d2-8fe4-16bd1a5d4322")]
 
 // Version information for an assembly consists of the following four values:
 //

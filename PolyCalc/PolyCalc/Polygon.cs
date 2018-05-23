@@ -1,12 +1,13 @@
 ﻿using System;
 
-namespace VistexExercise
+namespace PolyCalc
 {
     class Polygon
     {
         public int numberOfVertices { get; }
         public double lenghtOfSide { get; }
         public string name { get; }
+        public int verticesTable = new int[][];
 
         public Polygon(int nov, double los, string n)
         {
