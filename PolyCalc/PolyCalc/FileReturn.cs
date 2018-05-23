@@ -5,9 +5,9 @@ namespace PolyCalc
 {
     class FileReturn : DataReturn
     {
-        public FileReturn(double s, string n, string p) : base(s, n)
+        public FileReturn(Polygon poly, string path) : base(poly)
         {
-            path = p;
+            this.path = path;
         }
 
         public override void ReturnData()

@@ -2,12 +2,12 @@
 {
     class DataReturnFactory
     {
-        public DataReturn CreateDataReturn(double s, string n, string p)
+        public DataReturn CreateDataReturn(Polygon poly, string path)
         {
-            if (p == null)
-                return new ConsoleReturn(s, n);
+            if (path == null)
+                return new ConsoleReturn(poly);
             else
-                return new FileReturn(s, n, p);
+                return new FileReturn(poly,path);
 
         }
 

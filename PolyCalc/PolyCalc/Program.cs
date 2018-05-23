@@ -25,11 +25,11 @@ namespace PolyCalc
                 Polygon poly = polyFactory.CreatePolygon(numberOfVertices, lenghtOfSide);
                 if (args.Length==2)
                 {
-                    dataReturn = dataReturnFactory.CreateDataReturn(poly.CalculateSurface(), poly.name, null);
+                    dataReturn = dataReturnFactory.CreateDataReturn(poly, null);
                 }
                 else
                 {
-                    dataReturn = dataReturnFactory.CreateDataReturn(poly.CalculateSurface(), poly.name, args[2]);
+                    dataReturn = dataReturnFactory.CreateDataReturn(poly, args[2]);
                 }
                 dataReturn.ReturnData();
             }
